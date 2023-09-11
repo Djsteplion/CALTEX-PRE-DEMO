@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CALTEK TRADER DASHBOARD</title>
+
+    <link rel="stylesheet" href="withdrawPage.css">
+    <link rel="stylesheet" href="font-awesome.css">
+</head>
+<body>
+
+
+<div class="dashboard-container">
+    <div class="board">
+        <div class="dashboard-panel">
+            <div class="panel">
+                <div class="logo">
+                <span></span><img src="logo (1).png" alt="logo"></span>
+                <span></span><img src="CALTEX TRADER.png" alt="caltek-logo"></span>
+                </div>
+                <div class="panel-control">
+                    <span class="control" id="dashboard" onclick=''><i class="fa fa-th-large"></i>
+                    <a href="index.html">
+                        Dashboard
+                    </a>
+                    </span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-user"></i> Profile</span>
+                    <span class="control" id="funding" onclick=" "><b>FUNDING</b></span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-university"></i> Deposit</span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> Withdraw</span>
+                    <span class="control" id="trading" onclick=" "><b>TRADING</b></span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> Crypto</span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-line-chart"></i> Forex</span>
+                    <span class="control" id="partners" onclick=" "><b> PARTNERS</b></span>
+                    <span class="control" id=" " onclick=" ">  Become a Merchant</span>
+                    <span class="control" id="help" onclick=" "><b>HELP</b></span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> Legal Documents</span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> LogOut</span>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div class="board-content">
+
+                <!--This is the Container that displays "Welome back John"-->
+                <div class="welcome-user">
+                    <div class="welcome">
+                        <div class="welcome-text">
+                            <p>Welcome back, John</p>
+                        </div>
+                        <div class="welcome-asset">
+                            <span><img src="C:\Users\User\Desktop\HTML Crashcourse\STEVO\CALTEX TRADER DASHBOARD PROJECT\images\john.jpg" alt="user-avatar"></span>
+                            <span class="john"><p>John Smith</p></span>
+                            <span class="bell-notification" id=" " onclick=" "><i class="fa fa-bell"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                    <!--WITHDRAW CONTAINER-->
+                    <div class="withdraw-funds-container"  id="withdraw-funds-container">
+                        <div class="withdraw-funds">
+                            <div class="withdraw-fund-text">
+                                <h3>Withdraw Fund</h3>
+                            </div>
+                            <div class="withdraw-content-container">
+                                <div class="withdraw-container">
+                                    <div class="withdraw-limit-text" id="withraw-limit-text">
+                                        <p>Your withdrawal limit is $5,000 , get your account fully 
+                                            verified to increase your withdraw limit by 
+                                            <span class="clicking-here"><b>clicking here</b></span>
+                                        </p>
+                                    </div>
+                                    <div class="withdraw-options" id="withdraw-options">
+                                        <div class="withdr-options">
+                                            <div class="all" onclick="showAll()">
+                                                <i class="fa fa-money"></i>
+                                                <p>All</p>
+                                            </div>
+                                            <div class="cryptos" onclick="cryptoWithdrawal()">
+                                                <i class="fa fa-btc"></i>
+                                                <p>Cryptos</p>
+                                            </div>
+                                            <div class="credit-cards">
+                                                <i class="fa fa-credit-card-alt"></i>
+                                                <p>Credit Cards</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="crypto-options" id="crypto-options">
+                                        <h3 class="crypto-opt">Cryptos</h3>
+                                    </div>
+
+                                    <div class="crypto-payments" id="crypto-payments" onclick="cryptoWithdrawal()">
+                                        <div class="crypto-pay">
+                                            <span><b>Crypto</b></span>
+                                            <span><i class="fa fa-circle" id="crypto-circle"></i>Crypto</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="credit-options" id="credit-options">
+                                        <h3 class="credit-opt">Credit Card</h3>
+                                    </div>
+
+                                    <div class="credit-card-payments" id="credit-card-payments">
+                                        <div class="credit-pay">
+                                            <span><b>Interswitch</b></span>
+                                            <span><i class="fa fa-credit-card" id="crypto-circle"></i></span>
+                                        </div>
+                                    </div>
+
+
+                                     <!------------------This is the CRYPTO WITHDRAWAL FORM------------->
+                                    <div class="cryptoWithdrawal"  id="cryptoWithdrawal">
+                                        <div class="cryptowithdraw">
+
+                                          <div class="cryptoprefix">
+                                           <span><h4>Crypto Withdrawal</h4></span>
+                                           <span class="cp2"><h4>Crypto</h4></span>
+                                         </div>
+
+                                         <div class="imp-instruction">
+                                           <h4>Important instruction for successful withdrawing</h4>
+                                           <p>At caltex, we strive to make withdrawals quick, convenient and easy</p>
+                                           <p>To withdraw successfully, ensure that:</p>
+                                           <p>- Your withdrawals are proportional to
+                                              your deposit.
+                                          </p>
+                                          <p>- Your account has suficient funds and is in good standing
+                                        </p>
+                                        <p>In the unlikely event of a withdrawal issue,please contact our friendly
+                                            support team.Our team is always on hand to assist you.
+                                        </p>
+                                         </div>
+
+
+                                         <div class="enter-amount">
+                                            <h4>Enter amount</h4>
+                                            <select id="currency" name="currency" size="1" value="USD">
+                                                <option value="intrest" id="usd">USD</option>
+                                                <option value="intrest" id="euro">EURO</option>
+                                            </select>
+                                            <input type="number" id="number" name=" " placeholder=" ">
+                                         </div>
+
+
+                                         <div class="withdrawal-network">
+                                            <h4>Withdrawal Network</h4>
+                                            <select id="withdraw-net" name="withdraw-net" size="1" value="BTC">
+                                                <option value="intrest" id="btc">BTC - Bitcoin</option>
+                                                <option value="intrest" id="eth">ETH - Ethereum</option>
+                                                <option value="intrest" id="ltc">LTC - Litecoin</option>
+                                                <option value="intrest" id="usdtErc20">USDT - ERC20</option>
+                                                <option value="intrest" id="usdtTrc20">USDT - TRC20</option>
+                                                <option value="intrest" id="usdtBep20">USDT - BEP20</option>
+                                            </select>
+                                         </div>
+
+
+                                         <div class="wallet-address">
+                                            <h4>Wallet Address</h4>
+                                            <input type="text" id="wallet-addr" name="wallet-address " placeholder=" ">
+                                         </div>
+
+                                         <div class="withdraw-now"  onclick="congratOnWithdraw()" >
+                                            <span class="withdrawNow-crypto" >Withdraw</span>
+                                         </div>
+
+
+                                         <div class="depositFee-processingTime">
+                                            <div class="depoFeeProTime">
+                                                <div class="deposit-fee">
+                                                    <h4>Deposit Fee:</h4>
+                                                    <p>10% withdrawal Fee</p>
+                                                </div>
+                                                <div class="processingTime">
+                                                    <h4>Processing Time:</h4>
+                                                    <p>
+                                                        Up to 5minutes, but it can take longer depending on
+                                                        the payment processor and blockchain network.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                         </div>
+
+                    </div>
+                </div>
+
+
+                                    <!------------------This is the Transaction Processing Detail------------>
+                                    <div class="trans-pro-del"  id="trans-pro-del">
+                                    <div class="transaction-processing" id="transactionPro1" onclick="revealTransDetails()">
+                                        <span>Transaction Processing And Security Of Funds</span>
+                                        <span><i class="fa fa-caret-down"></i></span>
+                                    </div>
+                                    <div class="transaction-processing" id="transactionPro2" onclick="closeTransDetails()">
+                                        <span>Transaction Processing And Security Of Funds</span>
+                                        <span><i class="fa fa-caret-up"></i></span>
+                                    </div>
+                                    
+                                    <div class="transaction-processing-details" id="trans-pro-det">
+                                      <p>
+                                        <i class="fa fa-circle" id="circle"></i> Manual deposits or refunds are credited to myWallet only.
+                                        To transfer funds to your trading account, please proceed with an internal
+                                        transfer from myWallet.
+                                     </p>  
+                                     <p>
+                                        <i class="fa fa-circle" id="circle"></i> The company  is not liable for potential losses that may occur as a
+                                        result of market moves during the time your deposit is being approved.
+                                     </p>
+                                     <p>
+                                        <i class="fa fa-circle" id="circle"></i> CALTEX does not collect, store, or process any personal credit or debit Card
+                                        information.All payment transactions are processed through our independent
+                                        international payment processors.
+                                     </p>
+                                     <p>
+                                        <i class="fa fa-circle" id="circle"></i> CALTEX shall not accept any deposits from any third-party to the customer's
+                                        account.
+                                     </p>
+                                     <p>
+                                        <i class="fa fa-circle" id="circle"></i> CALTEX  does not accept cheque payments.
+                                     </p>
+                                     <p>
+                                        <i class="fa fa-circle" id="circle"></i> Deposits are processed 24/5 between 00:00 Server Time Monday to
+                                        00:00 Server Time Saturday.
+                                     </p>
+                                    </div>
+                                    </div>
+
+
+                     <!--Congratulations, your payment has been approved----->
+                    <div class="congratulations" id="congratulations">
+                        <div class="congrats">
+                            <div class="congrat-text">
+                                <p>Congratulations, your payment has been approved</p>
+                                <div class="see-investment-btn">
+                                    <span class="see-btn" onclick=" ">
+                                        <a href="C:\Users\User\Desktop\HTML Crashcourse\STEVO\CALTEX TRADER DASHBOARD PROJECT\index.html">
+                                            Trade More
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+                </div>
+                </div>
+
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function revealTransDetails(){
+    document.getElementById('trans-pro-det').style.display = 'block';
+    document.getElementById('transactionPro2').style.display = 'block';
+    document.getElementById('transactionPro2').style.display = 'flex';
+    document.getElementById('transactionPro1').style.display = 'none';
+}
+
+function closeTransDetails(){
+    document.getElementById('trans-pro-det').style.display = 'none';
+    document.getElementById('transactionPro1').style.display = 'block';
+    document.getElementById('transactionPro1').style.display = 'flex';
+    document.getElementById('transactionPro2').style.display = 'none';
+}
+
+function cryptoWithdrawal(){
+    document.getElementById('crypto-options').style.display = 'none';
+    document.getElementById('crypto-payments').style.display = 'none';
+    document.getElementById('credit-options').style.display = 'none';
+    document.getElementById('credit-card-payments').style.display = 'none';
+    document.getElementById('cryptoWithdrawal').style.display = 'block';
+}
+
+function showAll(){
+    document.getElementById('crypto-options').style.display = 'block';
+    document.getElementById('crypto-payments').style.display = 'block';
+    document.getElementById('credit-options').style.display = 'block';
+    document.getElementById('credit-card-payments').style.display = 'block';
+    document.getElementById('cryptoWithdrawal').style.display = 'none';
+}
+
+function congratOnWithdraw(){
+    document.getElementById('cryptoWithdrawal').style.display = 'none';
+    document.getElementById('withraw-limit-text').style.display = 'none';
+    document.getElementById('withdraw-options').style.display = 'none';
+    document.getElementById('transactionPro1').style.display = 'none';
+    document.getElementById('transactionPro2').style.display = 'none';
+    document.getElementById('trans-pro-del').style.display = 'none';
+    document.getElementById('congratulations').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
+
+                

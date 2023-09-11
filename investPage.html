@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CALTEK TRADER DASHBOARD</title>
+
+    <link rel="stylesheet" href="investPage.css">
+    <link rel="stylesheet" href="font-awesome.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="board">
+            <div class="dashboard-panel">
+                <div class="panel">
+                    <div class="logo">
+                    <span></span><img src="logo (1).png" alt="logo"></span>
+                    <span></span><img src="CALTEX TRADER.png" alt="caltek-logo"></span>
+                    </div>
+                    <div class="panel-control">
+                        <span class="control" id="dashboard" onclick=' '><i class="fa fa-th-large"></i>Dashboard</span>
+                        <span class="control" id=" " onclick=" "><i class="fa fa-user"></i> Profile</span>
+                        <span class="control" id="funding" onclick=" "><b>FUNDING</b></span>
+                        <span class="control" id=" " onclick=" "><i class="fa fa-university"></i> Deposit</span>
+                        <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> Withdraw</span>
+                        <span class="control" id="trading" onclick=" "><b>TRADING</b></span>
+                        <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> Crypto</span>
+                        <span class="control" id=" " onclick=" "><i class="fa fa-line-chart"></i> Forex</span>
+                        <span class="control" id="partners" onclick=" "><b> PARTNERS</b></span>
+                        <span class="control" id=" " onclick=" "> Become a Merchant</span>
+                        <span class="control" id="help" onclick=" "><b>HELP</b></span>
+                        <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> Legal Documents</span>
+                        <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> LogOut</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-content">
+                <div class="board-content">
+
+                     <!--This is the Container that displays "Welome back John"-->
+                     <div class="welcome-user">
+                        <div class="welcome">
+                            <div class="welcome-text">
+                                <p>Welcome back, John</p>
+                            </div>
+                            <div class="welcome-asset">
+                                <span><img src="John.jpg" alt="user-avatar"></span>
+                                <span class="john"><p>John Smith</p></span>
+                                <span class="bell-notification" id=" " onclick=" "><i class="fa fa-bell"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                      <!--Invest With Caltex[ --** CHOOSE YOUR FOREX/CRYPTO PLAN **-- ] Page--->
+
+                      <div class="invest-carltex"  id="invest-carltex">
+                        <div class="invest-inner">
+                            <div class="arrow-back">
+                                <a href="index.html">
+                                <i class="fa fa-long-arrow-left" id="arrow" onclick=" "></i>
+                                </a>
+                            </div>
+                            <div class="invest-wt-caltex">
+                                <p class="cal-text">Invest with Caltex</p>
+                                <div class="forex-or-crypto">
+                                    <div class="forex-or-crypto-inner">
+                                        <span class="forex" id="forex" onclick="checkForexPlan() ">Forex</span>
+                                        <span class="crypto" id="crypto" onclick="checkCryptoPlan()">Crypto</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invest-forex">
+                                <div class="invex-forex-inner">
+                                    <p class="wide-array"> 
+                                      We have a wide array of investment plans to choose from.
+                                      Choose from the options below the investment plan  which best suits you.
+                                    </p>
+
+                                    <div class="choose-your-plan">
+                                        <div class="choose">
+                                            <div class="choose-plan1" id="choose-plan1" onclick="reviewPlan1()">
+                                                <span>Choose Plan</span>
+                                                <span class="view-plan" id="view-plan" onclick="reviewPlan1()"><i class="fa fa-caret-down"></i></span>
+                                            </div>
+                                            <div class="close-plan1" id="close-plan1" onclick="closePlan1()">
+                                                <span>Choose Plan</span>
+                                                <span class="close-plan" id="close-plan" onclick="closePlan1()"><i class="fa fa-caret-up"></i></span>
+                                            </div>
+
+                                             <!--options for forex-->
+                                             <div class="plan-options-forex" id="plan-forex">
+                                                <div class="plan" >
+                                                    <div class="starter-plan" onclick="starterPlanF()">
+                                                        <span class=" " id="view-plan" onclick="starterPlanF()">
+                                                         Starter Plan 2.5% ROI, 7 DAYS PACKAGE $100-$10000 
+                                                        </span>
+                                                    </div>
+                                                    <div class="professional-plan"  onclick="professionalPlanF()">
+                                                        <span class=" " id="view-plan" onclick="professionalPlanF()">
+                                                         Professional Plan 2.5% ROI, 14 DAYS PACKAGE $11000-$50000
+                                                        </span>
+                                                    </div>
+                                                    <div class="master-plan" onclick="masterPlanF()">
+                                                        <span class=" " id="view-plan" onclick="masterPlanF()">
+                                                          Master Plan 2.5% ROI, 21 DAYS PACKAGE $50000-$100000
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                             <!--Options for crypto-->
+                                             <div class="choose-plan2" id="choose-plan2" onclick="reviewPlan2()">
+                                                <span>Choose Plan</span>
+                                                <span class="view-plan" id="view-plan" onclick="reviewPlan2()"><i class="fa fa-caret-down"></i></span>
+                                            </div>
+                                            <div class="close-plan2" id="close-plan2" onclick="closePlan2()">
+                                                <span>Choose Plan</span>
+                                                <span class="close-plan" id="close-plan" onclick="closePlan2()"><i class="fa fa-caret-up"></i></span>
+                                            </div>
+                                            <div class="plan-options-crypto" id="plan-crypto">
+                                                <div class="plan" >
+                                                    <div class="starter-plan" onclick="starterPlanC()">
+                                                        <span class=" " id="view-plan" >
+                                                         Starter Plan 3.0% ROI, 10 DAYS PACKAGE $300-$15000 
+                                                        </span>
+                                                    </div>
+                                                    <div class="professional-plan"  onclick="professionalPlanC()">
+                                                        <span class=" " id="view-plan" >
+                                                         Professional Plan 3.5% ROI, 20 DAYS PACKAGE $16000-$100000
+                                                        </span>
+                                                    </div>
+                                                    <div class="master-plan" onclick="masterPlanC()">
+                                                        <span class=" " id="view-plan" >
+                                                          Master Plan 4.0% ROI, 30 DAYS PACKAGE $101000-$UNLIMITED
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="invest-now" id="invest-now">
+                                        <span>Invest</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="second-page" id="second-page">
+                        <!--Starter Plan Forex-->
+                        <div class="starter-planForex" id="starter-planForex">
+                            <div class="starter-planF">
+                            <h4>Starter Plan</h4>
+                            <p><i class="fa fa-check" id="check"></i>Minimum Investment:$100</p>
+                            <p><i class="fa fa-check" id="check"></i>Maximum Investment:$10,000</p>
+                            <p><i class="fa fa-check" id="check"></i>Withdrawal fee:10% withdrawal charges</p>
+                            <p><i class="fa fa-check" id="check"></i>3 stages referral commission</p>
+                            <p><i class="fa fa-check" id="check"></i>10% referral for first person</p>
+                            <p><i class="fa fa-check" id="check"></i>7% referral for second person</p>
+                            <p><i class="fa fa-check" id="check"></i>3% referral for third person</p>
+                        </div>
+                        <div class="investment-buttons">
+                            <span class="invest-starterF" onclick=" "><a href="starterPlanFormF.html">Invest</a></span>
+                            <span class="change-starterF" onclick="changeStarterF()">Change Plan</span>
+                        </div>
+                        </div>
+
+
+                        <!--Professional  Plan Forex-->
+                     <div class="professional-planForex" id="professional-planForex">
+                        <div class="professional-planF">
+                        <h4>Professional Plan</h4>
+                        <p><i class="fa fa-check" id="check"></i>Minimum Investment:$11,000</p>
+                        <p><i class="fa fa-check" id="check"></i>Maximum Investment:$50,000</p>
+                        <p><i class="fa fa-check" id="check"></i>Withdrawal fee:7% withdrawal charges</p>
+                        <p><i class="fa fa-check" id="check"></i>3 stages referral commission</p>
+                        <p><i class="fa fa-check" id="check"></i>15% referral for first person</p>
+                        <p><i class="fa fa-check" id="check"></i>10% referral for second person</p>
+                        <p><i class="fa fa-check" id="check"></i>7% referral for third person</p>
+                    </div>
+                    <div class="investment-buttons">
+                        <span class="invest-professionalF" onclick=" "><a href='professionalPlanInvFormF.html'>
+                            Invest</a></span>
+                        <span class="change-professionalF" onclick="changeProfessionalF() ">Change Plan</span>
+                    </div>
+                    </div>
+
+
+                    <!--Master Plan Forex-->
+                    <div class="master-planForex" id="master-planForex">
+                        <div class="master-planF">
+                        <h4>Master Plan</h4>
+                        <p><i class="fa fa-check" id="check"></i>Minimum Investment:$51,000</p>
+                        <p><i class="fa fa-check" id="check"></i>Maximum Investment:$100,000</p>
+                        <p><i class="fa fa-check" id="check"></i>Withdrawal fee:5% withdrawal charges</p>
+                        <p><i class="fa fa-check" id="check"></i>3 stages referral commission</p>
+                        <p><i class="fa fa-check" id="check"></i>20% referral for first person</p>
+                        <p><i class="fa fa-check" id="check"></i>15% referral for second person</p>
+                        <p><i class="fa fa-check" id="check"></i>10% referral for third person</p>
+                    </div>
+                    <div class="investment-buttons">
+                        <span class="invest-masterF" onclick=" ">
+                            <a href="masterPlanInvFormF.html">
+                            Invest</a></span>
+                        <span class="change-masterF" onclick="changeMasterF()">Change Plan</span>
+                    </div>
+                    </div>
+
+
+                     <!--Starter Plan Crypto-->
+                     <div class="starter-planCrypto" id="starter-planCrypto">
+                        <div class="starter-planC">
+                        <h4>Starter Plan</h4>
+                        <p><i class="fa fa-check" id="check"></i>Minimum Investment:$300</p>
+                        <p><i class="fa fa-check" id="check"></i>Maximum Investment:$15,000</p>
+                        <p><i class="fa fa-check" id="check"></i>Withdrawal fee:5% withdrawal charges</p>
+                        <p><i class="fa fa-check" id="check"></i>3 stages referral commission</p>
+                        <p><i class="fa fa-check" id="check"></i>10% referral for first person</p>
+                        <p><i class="fa fa-check" id="check"></i>7% referral for second person</p>
+                        <p><i class="fa fa-check" id="check"></i>3% referral for third person</p>
+                    </div>
+                    <div class="investment-buttons">
+                        <span class="invest-starterC" onclick=" ">Invest</span>
+                        <span class="change-starterC" onclick="changeStarterC()">Change Plan</span>
+                    </div>
+                    </div>
+
+
+                       <!--Professional Plan Crypto-->
+                       <div class="professional-planCrypto" id="professional-planCrypto">
+                        <div class="professional-planC">
+                        <h4>Professional Plan</h4>
+                        <p><i class="fa fa-check" id="check"></i>Minimum Investment:$16,000</p>
+                        <p><i class="fa fa-check" id="check"></i>Maximum Investment:$100,000</p>
+                        <p><i class="fa fa-check" id="check"></i>Withdrawal fee:10% withdrawal charges</p>
+                        <p><i class="fa fa-check" id="check"></i>3 stages referral commission</p>
+                        <p><i class="fa fa-check" id="check"></i>15% referral for first person</p>
+                        <p><i class="fa fa-check" id="check"></i>10% referral for second person</p>
+                        <p><i class="fa fa-check" id="check"></i>7% referral for third person</p>
+                    </div>
+                    <div class="investment-buttons">
+                        <span class="invest-professionalC" onclick=" ">Invest</span>
+                        <span class="change-professionalC" onclick="changeProfessionalC()">Change Plan</span>
+                    </div>
+                    </div>
+
+                     <!--Master Plan Crypto-->
+                     <div class="master-planCrypto" id="master-planCrypto">
+                        <div class="master-planC">
+                        <h4>Master Plan</h4>
+                        <p><i class="fa fa-check" id="check"></i>Minimum Investment:$101,000</p>
+                        <p><i class="fa fa-check" id="check"></i>Maximum Investment:UNLIMITED</p>
+                        <p><i class="fa fa-check" id="check"></i>Withdrawal fee:10% withdrawal charges</p>
+                        <p><i class="fa fa-check" id="check"></i>3 stages referral commission</p>
+                        <p><i class="fa fa-check" id="check"></i>20% referral for first person</p>
+                        <p><i class="fa fa-check" id="check"></i>15% referral for second person</p>
+                        <p><i class="fa fa-check" id="check"></i>10% referral for third person</p>
+                    </div>
+                    <div class="investment-buttons">
+                        <span class="invest-masterC" onclick=" ">Invest</span>
+                        <span class="change-masterC" onclick="changeMasterC() ">Change Plan</span>
+                    </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function checkCryptoPlan(){
+    document.getElementById('crypto').style.borderBottomColor = 'black';
+    document.getElementById('crypto').style.color = 'black';
+    document.getElementById('forex').style.color = 'grey';
+    document.getElementById('forex').style.borderBottomColor = '#D7D7D7';
+    document.getElementById('choose-plan1').style.display = 'none';
+    document.getElementById('choose-plan2').style.display = 'block';
+    document.getElementById('choose-plan2').style.display = 'flex';
+    document.getElementById('plan-forex').style.display = 'none';
+    document.getElementById('invest-now').style.display = 'none';
+    document.getElementById('close-plan1').style.display = 'none';
+    document.getElementById('plan-crypto').style.display = 'none';
+    document.getElementById('close-plan2').style.display = 'none';
+    document.getElementById('starter-planForex').style.display = 'none';
+    document.getElementById('professional-planForex').style.display = 'none';
+    document.getElementById('master-planForex').style.display = 'none';
+    document.getElementById('starter-planCrypto').style.display = 'none';
+    document.getElementById('professional-planCrypto').style.display = 'none';
+    document.getElementById('master-planCrypto').style.display = 'none';
+
+} 
+
+function checkForexPlan() {
+    document.getElementById('crypto').style.borderBottomColor = '#D7D7D7';
+    document.getElementById('forex').style.borderBottomColor = 'black';
+    document.getElementById('crypto').style.color = 'rgb(176, 167, 167)';
+    document.getElementById('forex').style.color = 'black';
+    document.getElementById('choose-plan1').style.display = 'block';
+    document.getElementById('choose-plan1').style.display = 'flex';
+    document.getElementById('choose-plan2').style.display = 'none'; 
+    document.getElementById('plan-crypto').style.display = 'none';
+    document.getElementById('invest-now').style.display = 'none';
+    document.getElementById('close-plan2').style.display = 'none';
+    document.getElementById('plan-forex').style.display = 'none';
+    document.getElementById('close-plan2').style.display = 'none';
+    document.getElementById('close-plan1').style.display = 'none';
+    document.getElementById('starter-planForex').style.display = 'none';
+    document.getElementById('professional-planForex').style.display = 'none';
+    document.getElementById('master-planForex').style.display = 'none';
+    document.getElementById('starter-planCrypto').style.display = 'none';
+    document.getElementById('professional-planCrypto').style.display = 'none';
+    document.getElementById('master-planCrypto').style.display = 'none';
+}
+
+
+
+function reviewPlan1(){
+    document.getElementById('plan-forex').style.display = 'block';
+    document.getElementById('plan-crypto').style.display = 'none';
+    document.getElementById('invest-now').style.display = 'block';
+    document.getElementById('choose-plan1').style.display = 'none';
+    document.getElementById('close-plan1').style.display = 'block';
+    document.getElementById('close-plan1').style.display = 'flex';
+    document.getElementById('close-plan2').style.display = 'none';
+    
+}
+
+function reviewPlan2(){
+    document.getElementById('plan-crypto').style.display = 'block';
+    document.getElementById('plan-forex').style.display = 'none';
+    document.getElementById('invest-now').style.display = 'block';
+    document.getElementById('choose-plan2').style.display = 'none';
+    document.getElementById('close-plan2').style.display = 'block';
+    document.getElementById('close-plan2').style.display = 'flex';
+}
+
+
+function closePlan1(){
+    document.getElementById('plan-forex').style.display = 'none';
+    document.getElementById('invest-now').style.display = 'none';
+    document.getElementById('choose-plan1').style.display = 'block';
+    document.getElementById('choose-plan1').style.display = 'flex';
+    document.getElementById('close-plan1').style.display = 'none';
+}
+
+function closePlan2(){
+    document.getElementById('plan-crypto').style.display = 'none';
+    document.getElementById('invest-now').style.display = 'none';
+    document.getElementById('close-plan2').style.display = 'none';
+    document.getElementById('choose-plan2').style.display = 'block';
+    document.getElementById('choose-plan2').style.display = 'flex';
+}
+
+
+// SCRIPT FOR THE CHOOSE YOUR PLAN( FOREX & CRYPTO- starter, professional & master).
+
+
+function starterPlanF(){
+    
+    document.getElementById('choose-plan1').style.display = 'none';
+    document.getElementById('plan-forex').style.display = 'none';
+    document.getElementById('close-plan1').style.display = 'none';
+    document.getElementById('invest-now').style.display = 'none';
+    document.getElementById('starter-planForex').style.display = 'block';
+    document.getElementById('professional-planForex').style.display = 'none';
+    document.getElementById('master-planForex').style.display = 'none';
+    document.getElementById('starter-planCrypto').style.display = 'none';
+    document.getElementById('professional-planCrypto').style.display = 'none';
+    document.getElementById('master-planCrypto').style.display = 'none';
+
+
+    document.getElementById('starter-planInvestF').style.display = 'none';
+    document.getElementById('professional-planInvestF').style.display = 'none';
+    document.getElementById('master-planInvestF').style.display = 'none';
+    document.getElementById('starter-planInvestC').style.display = 'none';
+    document.getElementById('professional-planInvestC').style.display = 'none';
+    document.getElementById('master-planInvestC').style.display = 'none';
+}
+
+
+function professionalPlanF(){
+    document.getElementById('choose-plan1').style.display = 'none';
+    document.getElementById('plan-forex').style.display = 'none';
+    document.getElementById('close-plan1').style.display = 'none';
+    document.getElementById('invest-now').style.display = 'none';
+    document.getElementById('starter-planForex').style.display = 'none';
+    document.getElementById('professional-planForex').style.display = 'block';
+    document.getElementById('master-planForex').style.display = 'none';
+    document.getElementById('starter-planCrypto').style.display = 'none';
+    document.getElementById('professional-planCrypto').style.display = 'none';
+    document.getElementById('master-planCrypto').style.display = 'none';
+
+
+    document.getElementById('starter-planInvestF').style.display = 'none';
+    document.getElementById('professional-planInvestF').style.display = 'none';
+    document.getElementById('master-planInvestF').style.display = 'none';
+    document.getElementById('starter-planInvestC').style.display = 'none';
+    document.getElementById('professional-planInvestC').style.display = 'none';
+    document.getElementById('master-planInvestC').style.display = 'none';
+
+}
+
+function masterPlanF(){
+    document.getElementById('choose-plan1').style.display = 'none';
+    document.getElementById('plan-forex').style.display = 'none';
+    document.getElementById('close-plan1').style.display = 'none';
+    document.getElementById('invest-now').style.display = 'none';
+    document.getElementById('starter-planForex').style.display = 'none';
+    document.getElementById('professional-planForex').style.display = 'none';
+    document.getElementById('master-planForex').style.display = 'block';
+    document.getElementById('starter-planCrypto').style.display = 'none';
+    document.getElementById('professional-planCrypto').style.display = 'none';
+    document.getElementById('master-planCrypto').style.display = 'none';
+
+
+    document.getElementById('starter-planInvestF').style.display = 'none';
+    document.getElementById('professional-planInvestF').style.display = 'none';
+    document.getElementById('master-planInvestF').style.display = 'none';
+    document.getElementById('starter-planInvestC').style.display = 'none';
+    document.getElementById('professional-planInvestC').style.display = 'none';
+    document.getElementById('master-planInvestC').style.display = 'none';
+
+}
+
+
+function changeStarterF(){
+    document.getElementById('starter-planForex').style.display = 'none';
+    document.getElementById('choose-plan1').style.display = 'block';
+    document.getElementById('choose-plan1').style.display = 'flex';
+}
+
+function changeProfessionalF() {
+    document.getElementById('professional-planForex').style.display = 'none';
+    document.getElementById('choose-plan1').style.display = 'block';
+    document.getElementById('choose-plan1').style.display = 'flex';
+}
+
+function changeMasterF() {
+    document.getElementById('master-planForex').style.display = 'none';
+    document.getElementById('choose-plan1').style.display = 'block';
+    document.getElementById('choose-plan1').style.display = 'flex';
+}
+
+
+function revealTransDetails(){
+    document.getElementById('trans-pro-det').style.display = 'block';
+    document.getElementById('transactionPro2').style.display = 'block';
+    document.getElementById('transactionPro2').style.display = 'flex';
+    document.getElementById('transactionPro1').style.display = 'none';
+}
+
+function closeTransDetails(){
+    document.getElementById('trans-pro-det').style.display = 'none';
+    document.getElementById('transactionPro1').style.display = 'block';
+    document.getElementById('transactionPro1').style.display = 'flex';
+    document.getElementById('transactionPro2').style.display = 'none';
+}
+
+function starterPlanC(){
+    document.getElementById('choose-plan1').style.display = 'none';
+    document.getElementById('plan-forex').style.display = 'none';
+    document.getElementById('close-plan1').style.display = 'none';
+    document.getElementById('invest-now').style.display = 'none';
+    document.getElementById('starter-planForex').style.display = 'none';
+    document.getElementById('professional-planForex').style.display = 'none';
+    document.getElementById('master-planForex').style.display = 'none';
+    document.getElementById('starter-planCrypto').style.display = 'block';
+    document.getElementById('professional-planCrypto').style.display = 'none';
+    document.getElementById('master-planCrypto').style.display = 'none';
+    document.getElementById('choose-plan2').style.display = 'none';
+    document.getElementById('close-plan2').style.display = 'none';
+    document.getElementById('plan-crypto').style.display = 'none';
+}
+
+function changeStarterC(){
+    document.getElementById('starter-planCrypto').style.display = 'none';
+    document.getElementById('choose-plan2').style.display = 'block';
+    document.getElementById('choose-plan2').style.display = 'flex';
+}
+
+function professionalPlanC(){
+    document.getElementById('choose-plan1').style.display = 'none';
+    document.getElementById('plan-forex').style.display = 'none';
+    document.getElementById('close-plan1').style.display = 'none';
+    document.getElementById('invest-now').style.display = 'none';
+    document.getElementById('starter-planForex').style.display = 'none';
+    document.getElementById('professional-planForex').style.display = 'none';
+    document.getElementById('master-planForex').style.display = 'none';
+    document.getElementById('starter-planCrypto').style.display = 'none';
+    document.getElementById('professional-planCrypto').style.display = 'block';
+    document.getElementById('master-planCrypto').style.display = 'none';
+    document.getElementById('choose-plan2').style.display = 'none';
+    document.getElementById('close-plan2').style.display = 'none';
+    document.getElementById('plan-crypto').style.display = 'none';
+}
+
+function changeProfessionalC(){
+    document.getElementById('professional-planCrypto').style.display = 'none';
+    document.getElementById('choose-plan2').style.display = 'block';
+    document.getElementById('choose-plan2').style.display = 'flex';
+}
+
+function masterPlanC(){
+    document.getElementById('choose-plan1').style.display = 'none';
+    document.getElementById('plan-forex').style.display = 'none';
+    document.getElementById('close-plan1').style.display = 'none';
+    document.getElementById('invest-now').style.display = 'none';
+    document.getElementById('starter-planForex').style.display = 'none';
+    document.getElementById('professional-planForex').style.display = 'none';
+    document.getElementById('master-planForex').style.display = 'none';
+    document.getElementById('starter-planCrypto').style.display = 'none';
+    document.getElementById('professional-planCrypto').style.display = 'none';
+    document.getElementById('master-planCrypto').style.display = 'block';
+    document.getElementById('choose-plan2').style.display = 'none';
+    document.getElementById('close-plan2').style.display = 'none';
+    document.getElementById('plan-crypto').style.display = 'none';
+}
+
+
+function changeMasterC(){
+    document.getElementById('master-planCrypto').style.display = 'none';
+    document.getElementById('choose-plan2').style.display = 'block';
+    document.getElementById('choose-plan2').style.display = 'flex';
+}
+    </script>
+
+    </body>
+</html>

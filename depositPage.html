@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CALTEK TRADER DASHBOARD</title>
+
+    <link rel="stylesheet" href="depositPage.css">
+    <link rel="stylesheet" href="font-awesome.css">
+</head>
+<body>
+
+
+<div class="dashboard-container">
+    <div class="board">
+        <div class="dashboard-panel">
+            <div class="panel">
+                <div class="logo">
+                <span><img src="logo (1).png" alt="logo"></span>
+                <span><img src="CALTEX TRADER.png" alt="caltek-logo"></span>
+                </div>
+                <div class="panel-control">
+                    <span class="control" id="dashboard" onclick=''><i class="fa fa-th-large"></i>
+                    <a href="index.html">
+                        Dashboard
+                    </a>
+                    </span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-user"></i> Profile</span>
+                    <span class="control" id="funding" onclick=" "><b>FUNDING</b></span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-university"></i> Deposit</span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> Withdraw</span>
+                    <span class="control" id="trading" onclick=" "><b>TRADING</b></span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> Crypto</span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-line-chart"></i> Forex</span>
+                    <span class="control" id="partners" onclick=" "><b> PARTNERS</b></span>
+                    <span class="control" id=" " onclick=" "> Become a Merchant</span>
+                    <span class="control" id="help" onclick=" "><b>HELP</b></span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> Legal Documents</span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> LogOut</span>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div class="board-content">
+
+                <!--This is the Container that displays "Welome back John"-->
+                <div class="welcome-user">
+                    <div class="welcome">
+                        <div class="welcome-text">
+                            <p>Welcome back, John</p>
+                        </div>
+                        <div class="welcome-asset">
+                            <span><img src="john.jpg" alt="user-avatar"></span>
+                            <span class="john"><p>John Smith</p></span>
+                            <span class="bell-notification" id=" " onclick=" "><i class="fa fa-bell"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <!--DEPOSIT CONTAINER-->
+                 <div class="deposit-funds-container"  id="deposit-funds-container">
+                    <div class="deposit-funds">
+                        <div class="deposit-fund-text">
+                            <h3>Deposit Fund</h3>
+                        </div>
+                        <div class="deposit-content-container">
+                            <div class="deposit-container">
+                                <div class="deposit-limit-text">
+                                    <p>Your deposit limit is $5,000 , get your account fully 
+                                        verified to increase your deposit limit by 
+                                        <span class="clicking-here"><b>clicking here</b></span>
+                                    </p>
+                                </div>
+                                <div class="deposit-options">
+                                    <div class="depo-options">
+                                        <div class="all" onclick="showAll()">
+                                            <i class="fa fa-money"></i>
+                                            <p>All</p>
+                                        </div>
+                                        <div class="cryptos" onclick="cryptoDeposit()">
+                                            <i class="fa fa-btc"></i>
+                                            <p>Crypto</p>
+                                        </div>
+                                        <div class="credit-cards" onclick="cardDeposit()">
+                                            <i class="fa fa-credit-card-alt"></i>
+                                            <p>Credit Cards</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cdm" id="cdm" onclick="showAll() ">
+                                        <i class="fa fa-long-arrow-left"></i>
+                                                  Change deposit mode
+                                </div>
+
+                                <div class="crypto-options" id="crypto-options">
+                                    <h3 class="crypto-opt">Cryptos</h3>
+                                </div>
+
+                                <div class="crypto-payments" id="crypto-payments" onclick="cryptoDeposit()">
+                                    <div class="crypto-pay">
+                                        <span><b>Crypto Payments</b></span>
+                                        <span><i class="fa fa-circle" id="crypto-circle"></i>Crypto</span>
+                                    </div>
+                                </div>
+                               
+
+                                <div class="credit-options" id="credit-options" >
+                                    <h3 class="credit-opt">Credit Card</h3>
+                                </div>
+
+                                <div class="credit-card-payments" id="credit-card-payments" onclick="cardDeposit()">
+                                    <div class="credit-pay">
+                                        <span><b>Interswitch</b></span>
+                                        <span><span class="visa">VISA</span><span>
+                                            <img src="1156750_finance_mastercard_payment_icon (1) 1.png" class="inter">
+                                        </span></span>
+                                    </div>
+                                </div>
+
+                                <div class="cryptoDeposit"  id="cryptoDeposit">
+                                    <div class="cryptowithdraw">
+
+                                      <div class="cryptoprefix">
+                                       <span><h3>Crypto Payments</h3></span>
+                                       <span class="cp2"><h4><i class="fa fa-circle" id="crypto-circle"></i> Crypto</h4></span>
+                                     </div>
+
+                                     <div class="imp-instruction">
+                                       <h4>Important instructions before making the payment</h4>
+                                       <p> <i class="fa fa-circle" id="circle"></i> Payments with this method may at our request be subject to enhanced
+                                          due dilligence and security checks to ensure that they are not fraudulent.
+                                      </p>
+                                       <p> <i class="fa fa-circle" id="circle"></i> Make sure you send the Crypto Payment within the 15 minutes
+                                        before invoice expiration.
+                                       </p>
+                                       <p> <i class="fa fa-circle" id="circle"></i> Make sure you always add the Payment Destination Tag/Memo or ID 
+                                        before making the transaction.
+                                      </p>
+                                      <p> <i class="fa fa-circle" id="circle"></i> Please make sure you always use the updated payment details that will be
+                                        presented to you after you click Deposit. HFM will bear no responsibility
+                                        for crediting and returning funds if you use invalid payment details.
+                                    </p>
+                                    <p> <i class="fa fa-circle" id="circle"></i> Only accepted cryptocurrencies are processed using this method.
+                                        Other currencies or tokens are not supported.
+                                    </p>
+                                     </div>
+
+
+                                     <div class="copy-and-paste" id="copy-and-paste">
+                                        <p>Copy and paste the payment details into your wallet</p>
+                                        <p>Address</p>
+                                        <div class="payment-details">
+                                            <span id="payment-detail">paymentdetailsdjcjfjhfhfkhddfrrriuefugdd</span>
+                                            <i class="fa fa-copy"></i>
+                                        </div>
+                                        <p> Deposit only <span id="currency-choice">btc</span> to this wallet</p>
+
+                                     </div>
+
+                                     <div class="enter-amount" id="enter-amount">
+                                        <h4>Enter amount</h4>
+                                        <select id="currency" name="currency" size="1" value="USD">
+                                            <option value="intrest" id="usd">USD</option>
+                                            <option value="intrest" id="euro">EURO</option>
+                                        </select>
+                                        <input type="number" id="number" name=" " placeholder=" ">
+                                     </div>
+
+
+                                     <div class="withdrawal-network" id="withdrawal-network">
+                                        <h4>Accepted Cryptocurrencies</h4>
+                                        <select id="withdraw-net" name="withdraw-net" size="1" value="BTC">
+                                            <option value="intrest" id="btc">BTC - Bitcoin</option>
+                                            <option value="intrest" id="eth">ETH - Ethereum</option>
+                                            <option value="intrest" id="ltc">LTC - Litecoin</option>
+                                            <option value="intrest" id="usdtErc20">USDT - ERC20</option>
+                                            <option value="intrest" id="usdtTrc20">USDT - TRC20</option>
+                                            <option value="intrest" id="usdtBep20">USDT - BEP20</option>
+                                        </select>
+                                     </div>
+                                     
+
+                                     <div class="withdraw-now" id="withdrawNow" onclick="depositCryptoNow()" >
+                                        <span class="withdrawNow-crypto" >Deposit</span>
+                                     </div>
+                                 </div>
+                            </div>
+
+
+
+               <!-------------------Begining of deposit by card---------------------------->
+               <div class="cardDeposit"  id="cardDeposit">
+                <div class="depositWithCard">
+
+                  <div class="cryptoprefix">
+                   <span><h3>INTERSWITCH</h3></span>
+                   <span class="cp3"><img src="1156750_finance_mastercard_payment_icon (1) 1.png">Credit Card</span>
+                 </div>
+
+                 <div class="imp-instructionForCard">
+                   <h4>Important instructions before making the payment</h4>
+                   <p> <i class="fa fa-circle" id="circle"></i> Verification is important before
+                    completing the transaction.
+                  </p>
+                 </div>
+
+
+                 <div class="enter-amount" id="enter-amount">
+                    <h4>Enter amount</h4>
+                    <select id="currency" name="currency" size="1" value="USD">
+                        <option value="intrest" id="usd">USD</option>
+                        <option value="intrest" id="euro">EURO</option>
+                    </select>
+                    <input type="number" id="number" name=" " placeholder=" ">
+                 </div>
+                 
+
+                 <div class="withdraw-now" id="withdrawNow" onclick="depositCryptoNow()" >
+                    <span class="withdrawNow-crypto" >Deposit</span>
+                 </div>
+            </div>
+        </div>
+
+    <!------------------------------------ End of deposit-by-card----------------------------------->
+
+
+    <div class="trans-pro-del" >
+        <div class="transaction-processing" id="transactionPro1" onclick="revealTransDetails()">
+            <span>Transaction Processing And Security Of Funds</span>
+            <span><i class="fa fa-caret-down"></i></span>
+        </div>
+        <div class="transaction-processing" id="transactionPro2" onclick="closeTransDetails()">
+            <span>Transaction Processing And Security Of Funds</span>
+            <span><i class="fa fa-caret-up"></i></span>
+        </div>
+        
+        <div class="transaction-processing-details" id="trans-pro-det">
+          <p>
+            <i class="fa fa-circle" id="circle"></i> Manual deposits or refundsn are credited to myWallet only.
+            To transfer funds to your trading account, please proceed with an internal
+            transfer from myWallet.
+         </p>  
+         <p>
+            <i class="fa fa-circle" id="circle"></i> The company  is not liable for potential losses that may occur as a
+            result of market moves during the time your deposit is being approved.
+         </p>
+         <p>
+            <i class="fa fa-circle" id="circle"></i> CALTEX does not collect, store, or process any personal credit or debit Card
+            information.All payment transactions are processed through our independent
+            international payment processors.
+         </p>
+         <p>
+            <i class="fa fa-circle" id="circle"></i> CALTEX ahall not accept any deposits from any third-party to the customer's
+            account.
+         </p>
+         <p>
+            <i class="fa fa-circle" id="circle"></i> CALTEX  does not accept cheque payments.
+         </p>
+         <p>
+            <i class="fa fa-circle" id="circle"></i> Deposits are processed 24/5 between 00:00 Server Time Monday to
+            00:00 Server Time Saturday.
+         </p>
+        </div>
+        </div>
+
+        <div class="depositFee-processingTime"  id="depositFee-processingTime">
+            <div class="depoFeeProTime">
+                <div class="deposit-fee">
+                    <h4>Deposit Fee:</h4>
+                    <p>No Deposit Fee</p>
+                </div>
+                <div class="processingTime">
+                    <h4>Processing Time:</h4>
+                    <p>
+                        Up to 5 minutes, but it can take longer depending on
+                        the payment processor and blockchain network.
+                    </p>
+                </div>
+            </div>
+         </div>
+
+
+
+
+             </div>
+                </div>
+                </div>
+
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function revealTransDetails(){
+    document.getElementById('trans-pro-det').style.display = 'block';
+    document.getElementById('transactionPro2').style.display = 'block';
+    document.getElementById('transactionPro2').style.display = 'flex';
+    document.getElementById('transactionPro1').style.display = 'none';
+}
+
+function closeTransDetails(){
+    document.getElementById('trans-pro-det').style.display = 'none';
+    document.getElementById('transactionPro1').style.display = 'block';
+    document.getElementById('transactionPro1').style.display = 'flex';
+    document.getElementById('transactionPro2').style.display = 'none';
+}
+
+function cryptoDeposit(){
+    document.getElementById('crypto-options').style.display = 'none';
+    document.getElementById('crypto-payments').style.display = 'none';
+    document.getElementById('credit-options').style.display = 'none';
+    document.getElementById('credit-card-payments').style.display = 'none';
+    document.getElementById('copy-and-paste').style.display = 'none';
+    document.getElementById('cdm').style.display = 'block';
+    document.getElementById('cryptoDeposit').style.display = 'block';
+    document.getElementById('withdrawNow').style.display = 'block';
+    document.getElementById('withdrawal-network').style.display = 'block';
+    document.getElementById('enter-amount').style.display = 'block';
+    document.getElementById('depositFee-processingTime').style.display = 'block';
+    document.getElementById('cardDeposit').style.display = 'none';   
+}
+
+function showAll(){
+    document.getElementById('crypto-options').style.display = 'block';
+    document.getElementById('crypto-payments').style.display = 'block';
+    document.getElementById('credit-options').style.display = 'block';
+    document.getElementById('credit-card-payments').style.display = 'block';
+    document.getElementById('cryptoDeposit').style.display = 'none';
+    document.getElementById('cdm').style.display = 'none';
+    document.getElementById('depositFee-processingTime').style.display = 'none'; 
+    document.getElementById('cardDeposit').style.display = 'none'; 
+}
+
+
+function cardDeposit(){
+    document.getElementById('crypto-options').style.display = 'none';
+    document.getElementById('crypto-payments').style.display = 'none';
+    document.getElementById('credit-options').style.display = 'none';
+    document.getElementById('credit-card-payments').style.display = 'none';
+    document.getElementById('cdm').style.display = 'block';
+    document.getElementById('depositFee-processingTime').style.display = 'block'; 
+    document.getElementById('cardDeposit').style.display = 'block'; 
+    document.getElementById('cryptoDeposit').style.display = 'none';
+}
+
+function depositCryptoNow(){
+    document.getElementById('copy-and-paste').style.display = 'block';
+    document.getElementById('withdrawNow').style.display = 'none';
+    document.getElementById('withdrawal-network').style.display = 'none';
+    document.getElementById('enter-amount').style.display = 'none';
+}
+                                     
+
+function congratOnWithdraw(){
+    document.getElementById('cryptoWithdrawal').style.display = 'none';
+    document.getElementById('withraw-limit-text').style.display = 'none';
+    document.getElementById('withdraw-options').style.display = 'none';
+    document.getElementById('transactionPro1').style.display = 'none';
+    document.getElementById('transactionPro2').style.display = 'none';
+    document.getElementById('trans-pro-del').style.display = 'none';
+    document.getElementById('congratulations').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
+
+                

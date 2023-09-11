@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CALTEK TRADER DASHBOARD</title>
+
+    <link rel="stylesheet" href="C:\Users\User\Desktop\HTML Crashcourse\STEVO\CALTEX TRADER DASHBOARD PROJECT\starterPlanFormC.css">
+    <link rel="stylesheet" href="C:\Users\User\Desktop\HTML Crashcourse\STEVO\Naishare website\Other folder\font-awesome-4.7.0\font-awesome-4.7.0\css\font-awesome.css">
+</head>
+<body>
+
+
+<div class="dashboard-container">
+    <div class="board">
+        <div class="dashboard-panel">
+            <div class="panel">
+                <div class="logo">
+                <span></span><img src="images\logo (1).png" alt="logo"></span>
+                <span></span><img src="images\CALTEX TRADER.png" alt="caltek-logo"></span>
+                </div>
+                <div class="panel-control">
+                    <span class="control" id="dashboard" onclick=''><i class="fa fa-th-large"></i>Dashboard</span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-user"></i> Profile</span>
+                    <span class="control" id="funding" onclick=" "><b>FUNDING</b></span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-university"></i> Deposit</span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> Withdraw</span>
+                    <span class="control" id="trading" onclick=" "><b>TRADING</b></span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> Crypto</span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-line-chart"></i> Forex</span>
+                    <span class="control" id="partners" onclick=" "><b> PARTNERS</b></span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> Become a Merchant</span>
+                    <span class="control" id="help" onclick=" "><b>HELP</b></span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> Legal Documents</span>
+                    <span class="control" id=" " onclick=" "><i class="fa fa-binoculars"></i> LogOut</span>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div class="board-content">
+
+                <!--This is the Container that displays "Welome back John"-->
+                <div class="welcome-user">
+                    <div class="welcome">
+                        <div class="welcome-text">
+                            <p>Welcome back, John</p>
+                        </div>
+                        <div class="welcome-asset">
+                            <span><img src="images\john.jpg" alt="user-avatar"></span>
+                            <span class="john"><p>John Smith</p></span>
+                            <span class="bell-notification" id=" " onclick=" "><i class="fa fa-bell"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arrow-back">
+                    <a href="C:\Users\User\Desktop\HTML Crashcourse\STEVO\CALTEX TRADER DASHBOARD PROJECT\caltex pages\dashboardMainPage.html"><i class="fa fa-long-arrow-left" id="arrow" onclick="backButton()"></i></a>
+                </div>
+
+                <div class="invest-wt-caltex">
+                    <p class="cal-text">Invest with Caltex</p>
+                    <div class="forex-or-crypto">
+                        <div class="forex-or-crypto-inner">
+                            <span class="forex" id="forex" onclick="checkForexPlan() ">Forex</span>
+                            <span class="crypto" id="crypto" onclick="checkCryptoPlan()">Crypto</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!--Starter Plan Invest Crypto Form-->
+                 <div class="starter-planInvestC"  id="starter-planInvestC">
+                    <form action="#">
+                        <div class="invest-text">
+                            <h3>Invest for Starter Plan</h3>
+                        </div>
+                        <div class="input-amount">
+                        <span class="input-des">Input Amount</span>
+                        <input type="text" id="amount" name="amount" placeholder="$300 - $15,000">
+                        </div><br>
+                        
+                        <div class="input-amount">
+                        <span class="input-des">Return Of Investment</span>
+                        <input type="text" id="roi" name="roi" placeholder=" ">
+                        </div><br>
+
+                        
+
+                        <div class="input-amount">
+                        <span class="input-des">Date Of Investment</span>
+                        <div class="input-date">
+                        <span class="dayOI"><input type="day" id="dayOI" name="dayOI" aria-valuemin="01"  aria-valuemax="31"   value="06"><i class="fa fa-caret-down" id="edit-date"></i></span>
+                        <span class="dayOI"><input type="day" id="dayOI" name="monthOI" aria-valuemin="01"  aria-valuemax="12"   value="09"><i class="fa fa-caret-down" id="edit-date"></i></span>
+                        <span class="dayOI"><input type="year" id="dayOI" name="yearOI" aria-valuemin="2023"  aria-valuemax="2027"   value="2023"><i class="fa fa-caret-down" id="edit-date"></i></span>
+                        </div>
+                        </div><br>
+
+                        
+                        <div class="input-amount">
+                        <span class="input-des">Duration Of Investment</span>
+                        <input type="text" id="doi" name="doi" placeholder="14 DAYS OF INVESTMENT ">
+                        </div><br>  
+                          
+                       
+                        <div class="input-amount">
+                        <span class="input-des">Investment Last till</span>
+                        <div class="input-date">
+                        <span class="dayOI"><input type="day" id="dayOI" name="dayOI" aria-valuemin="01"  aria-valuemax="31"   value="20"><i class="fa fa-caret-down" id="edit-date"></i></span>
+                        <span class="dayOI"><input type="day" id="dayOI" name="monthOI" aria-valuemin="01"  aria-valuemax="12"   value="09"><i class="fa fa-caret-down" id="edit-date"></i></span>
+                        <span class="dayOI"><input type="year" id="dayOI" name="yearOI" aria-valuemin="2023"  aria-valuemax="2027"   value="2023"><i class="fa fa-caret-down" id="edit-date"></i></span>
+                        </div>
+                        </div><br>
+                        
+                        <div class="invest-starter-btn">
+                        <span class="invest-starter" onclick=" ">Invest</span>
+                        </div>
+
+                       </form>
+                </div>
+
+                <!--You have succesfully invested with Caltex----->
+                <div class="congratulations" id="congratulations">
+                    <div class="congrats">
+                        <div class="congrat-text">
+                            <p>Congratulations, you have invested with caltex successfully</p>
+                            <div class="see-investment-btn">
+                                <span class="see-btn" onclick=" ">See Your Investment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+   function congrat(){
+    document.getElementById('congratulations').style.display = 'block';
+    document.getElementById('starter-planInvestC').style.display = 'none';
+   }
+</script>
+
+            </body>
+            </html>
